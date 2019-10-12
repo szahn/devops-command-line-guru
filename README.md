@@ -20,6 +20,8 @@ What's the difference between Cmd, Powershell, and Bash?
 
 Everything is text. Pipelines. great for writing shell scripts that use command line interface (CLI) utilities, utilizing output from one command to another (piping), and executing simple tasks (up to 100 lines of code)
 
+Usually located in `/bin/bash`
+
 ## Cmd
 
 [DOS-based](https://github.com/microsoft/ms-dos).
@@ -32,12 +34,12 @@ Everything is text. Pipelines. great for writing shell scripts that use command 
 
 Uses Verb-Noun pattern (`Get-Item`)
 
-### Powershell Pipelines
-
-
-
 
 ## Powershell Core
+
+"A tool that was powerful enough to handle cross-platform administration while allowing advanced customization" &ndash;[PowerShell Core for Linux Admins](https://linuxacademy.com/cp/modules/view/id/135)
+
+
 
 Download: [Powershell Core on Github](https://github.com/PowerShell/PowerShell).
 
@@ -136,9 +138,17 @@ tail -f /var/log/syslog
 
 > Ideally, you don't want to write complex scripts in bash. Python is an excellent replacement. If you’ve got more than about 50 lines of bash you should probably be doing python. Has better debugging tools and utilities than Bash, which makes it a great language for developing complex software applications involving many lines of code
 
+### Python Scripting
+
 Avoid Python 2.7 as [official support ends 2020](https://www.python.org/dev/peps/pep-0373/#id2). Use Python 3+. You can use [`boto3`](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html?id=docs_gateway) python library to replace complex Bash scripts in AWS automation.
 
+```bash
+./scripts/python.py
+```
+
 ### Ansible
+
+Ansible is about automating client/server management. Execute scripts on remote servers without having to RDP into them.
 
 #### Install Ansible
 
@@ -147,6 +157,11 @@ sudo apt-get install ansible sshpass
 ```
 
 #### Copy a file to a Linux host
+
+- Setup a `hosts` file
+- Create an [ssh key](https://linuxize.com/post/how-to-set-up-ssh-keys-on-ubuntu-1804/)
+- On the remote host, [add a user](https://linuxize.com/post/how-to-add-and-delete-users-on-ubuntu-18-04/) and ssh key
+- Run the playbook
 
 ```
 sudo ./hosts
