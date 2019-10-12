@@ -160,5 +160,4 @@ ansible-playbook -i hosts -u demo --private-key=./keys/id_rsa ./ansible/copy-fil
 
 # Resources
 
-- https://leanpub.com/aunixpersonsguidetopowershell/read#leanpub-auto-whoami
-
+- [A Unix Person's Guide to PowerShell](https://leanpub.com/aunixpersonsguidetopowershell/read#leanpub-auto-whoami)
