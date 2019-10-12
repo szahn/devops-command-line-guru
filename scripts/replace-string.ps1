@@ -1,0 +1,1 @@
+((Get-Content -path sample.txt -Raw) -replace 'brown','white') | Set-Content -Path sample.txt

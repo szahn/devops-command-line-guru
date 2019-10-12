@@ -1,0 +1,7 @@
+- hosts: ubuntu
+
+  tasks:
+  - name: Ansible copy file to remote server
+    copy:
+      src: /home/szahn/code/cli-guru-phx-code-camp/sample.txt
+      dest: /home/demo
